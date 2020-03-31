@@ -19,7 +19,7 @@ def puppylatin(name):
     else:
         puppy_latin = name + 'y'
 
-    return "Hi {}! Your puppylatin name is {}".format(name, puppy_latin)
+    return "<h1>Hi {}! Your puppylatin name is {}</h1>".format(name, puppy_latin)
 
 if __name__ == '__main__':
-    index()
+    app.run()
