@@ -5,9 +5,22 @@
     <title>First Flash Site</title>
 </head>
 <body>
-    <h1>Hi {{ name }}</h1>
-    <h1>{{ letters[2:] }}</h1>
-    <h2>Here is a pic of a baloons</h2>
-    <img src="../static/baloons.jpg" alt="">
+    <ul>
+        {% for number in my_list %}
+        <li>{{ number }}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for name in puppy_list %}
+        <li>{{ name }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if 'Rufus' in puppy_list %}
+        <p>Found you Rufus</p>
+    {% else %}
+        <p>Hmm.. Rufus is not in the list</p>
+    {% endif %}
+
 </body>
 </html>
