@@ -2,7 +2,24 @@
 
 {% block content %}
 <div class="jumbotron">
-    <h1>Well done {{ user_name }}</h1>
+
+    <p>Let's check your user name!</p>
+
+    {% if report %}
+        <p>Your user name passed all checks!</p>
+    {% else %}
+    <ul>
+        {% if not lower %}
+            <li>You did not use a lowercase letter</li>
+        {% endif %}
+        {% if not upper %}
+            <li>You did not use a UPPERCASE letter</li>
+        {% endif %}
+        {% if not num_end %}
+            <li>You did not use a number at the end of the username</li>
+        {% endif %}
+    </ul>
+    {% endif %}
 
 </div>
 {% endblock %}
