@@ -6,10 +6,11 @@
     <br>
     <p>User name must be all 3:</p>
     <ul>
-        <li>lower case</li>
-        <li>UPPER CASE</li>
-        <li>At least one NuMb3r</li>
+        <li>One lower case</li>
+        <li>One UPPER CASE</li>
+        <li>One number at the end of user name</li>
     </ul>
+    <br>
     <form action="{{ url_for('report') }}">
         <label for="user_name">User Name:
             <input type="text" name="user_name">
