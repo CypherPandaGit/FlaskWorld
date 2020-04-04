@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{#  INDEX.HTML #}
+<p>
+    {% if breed %}
+        The breed you entered is {{ breed }}
+        Update it in the form below:
+    {% else %}
+        Please enter your breed:
+    {% endif %}
+</p>
 
-</body>
-</html>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.breed.label }} {{ form.breed() }}
+    {{ form.submit() }}
+</form>
