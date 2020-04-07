@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{# INDEX.html #}
+<h1>Welcome to the puppy survey</h1>
+<form method="post">
+    {{ form.hidden_tag() }}
+    {{ form.breed.label }}{{ form.breed }}
+    <br>
+    {{ form.neutered.label }}{{ form.neutered }}
+    <br>
+    {{ form.food_choice.label }}{{ form.food_choice }}
+    <br>
+    {{ form.mood.label }}{{ form.mood }}
+    <br>
+    Any pther feedback?
+    <br>
+    {{ form.feedback }}
+    <br>
+    {{ form.submit() }}
+</form>
