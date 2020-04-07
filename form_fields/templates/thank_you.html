@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{# THANK_YOU.html #}
+<h1>Thank you. Here is the info you gave us</h1>
+<ul>
+    <li>Breed: {{ session['breed'] }}</li>
+    <li>Neutered: {{ session['neutered'] }}</li>
+    <li>Mood: {{ session['mood'] }}</li>
+    <li>Food: {{ session['food'] }}</li>
+    <li>Feedback: {{ session['feedback'] }}</li>
+</ul>
