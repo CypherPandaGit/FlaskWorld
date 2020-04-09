@@ -13,22 +13,20 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+os.path.join(basedir, 'data
 app.config['SQALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
-######################################################################
 
 
 class Pokemon(db.Model):
 
     # MANUAL TABLE NAME CHOICE
-    __tablename__ = 'pokemon'
+    __tablename__ = 'pokemons'
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text)
     level = db.Column(db.Integer)
 
-    def __init__(self,name,level):
+    def __init__(self, name, level):
         self.name = name
         self.level = level
 
     def __repr__(self):
         return f"Pokemon {self.name} is level {self.level}"
-
