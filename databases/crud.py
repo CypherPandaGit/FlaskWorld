@@ -1,9 +1,9 @@
 from basic import db, Pokemon
 
 # CREATE #
-# my_pokemon = Pokemon('Mew', 10)
-# db.session.add(my_pokemon)
-# db.session.commit()
+my_pokemon = Pokemon('Mew', 10)
+db.session.add(my_pokemon)
+db.session.commit()
 
 # READ #
 all_pokemons = Pokemon.query.all() # list of Pokemon objects in the table
@@ -29,3 +29,11 @@ print(first_pokemon)
 # Result: Pokemon Pikachu is level 23
 
 # DELETE #
+second_pokemon = Pokemon.query.get(2)
+db.session.delete(second_pokemon)
+db.session.commit()
+# DELETES CHARIZARD
+
+#
+all_pokemons = Pokemon.query.all()
+print(all_pokemons)
