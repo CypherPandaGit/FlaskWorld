@@ -3,8 +3,8 @@ from basic import db, Pokemon
 # CREATES ALL THE TABLES Model ->> DB Table
 db.create_all()
 
-pikachu = Pokemon('Pikachu', 3)
-charizard = Pokemon('Charizard', 4)
+pikachu = Pokemon('Pikachu', 3, 'electric')
+charizard = Pokemon('Charizard', 4, 'fire')
 
 print(pikachu.id)
 print(charizard.id)

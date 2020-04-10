@@ -1,7 +1,7 @@
 from basic import db, Pokemon
 
 # CREATE #
-my_pokemon = Pokemon('Mew', 10)
+my_pokemon = Pokemon('Mew', 10, 'psychic')
 db.session.add(my_pokemon)
 db.session.commit()
 
